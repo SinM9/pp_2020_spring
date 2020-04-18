@@ -13,7 +13,8 @@ double Simpson_Integr_OMP(double(*func)(std::vector<double>), std::vector <doubl
   double result = 0.0;
 
   if (dimension == 0) {
-    for (int i = 0; i < x.size(); ++i) {
+	const int t = x.size();
+    for (int i = 0; i < t; ++i) {
       lim.push_back(x[i]);
     }
   }
